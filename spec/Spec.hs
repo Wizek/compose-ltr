@@ -17,8 +17,16 @@ main = hspec $ do
         "Hello World"
           $> reverse
           $> ("!" ++)
-          $> take 6
+          $> take <$ 1 + 5
           $> (`shouldBe` "!dlroW")
+
+        let
+          fn = id
+            .> reverse
+            .> ("!" ++)
+            .> (take <$ 1 + 5)
+
+        (fn "Hello World") `shouldBe` "!dlroW"
 
       it "should work just like the Prelude version" $ do
         let
