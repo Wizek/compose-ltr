@@ -1,7 +1,8 @@
 import Test.Hspec
 import Test.QuickCheck
 import Test.QuickCheck.Function
-import Data.Function.Compose.LeftToRight
+-- import Data.Function.Compose.LeftToRight
+import ComposeLTR
 
 prop1 f g = (f $ g) == (g $> f)
 prop2 f g = ((g . f) 1) == (1 $> (f .> g))
@@ -40,5 +41,3 @@ main = hspec $ do
           prop :: (Fun Int Int) -> (Fun Int Int) -> Bool
           prop (Fun _ f) (Fun _ g) = prop2 f g
         property prop
-
-
