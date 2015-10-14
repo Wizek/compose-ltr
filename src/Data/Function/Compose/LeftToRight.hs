@@ -7,7 +7,7 @@ infixl 9 .>
 infixl 0 $>
 
 (<$) = ($)
-infixl 1 <$
+infixr 1 <$
 
 (<.) = (.)
-infixl 9 <.
+infixr 9 <.
