@@ -3,6 +3,7 @@ import Test.QuickCheck
 import Test.QuickCheck.Function
 -- import Data.Function.Compose.LeftToRight
 import ComposeLTR
+import Prelude hiding ((<$))
 
 prop1 f g = (f $ g) == (g $> f)
 prop2 f g = ((g . f) 1) == (1 $> (f .> g))

@@ -1,5 +1,7 @@
 module Data.Function.Compose.LeftToRight (($>), (.>), (<$), (<.)) where
 
+import Prelude hiding ((<$))
+
 (.>) = flip (.)
 infixl 9 .>
 
