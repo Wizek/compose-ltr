@@ -7,6 +7,7 @@ synopsis:            More intuitive, left-to-right function composition.
 description:         More intuitive, left-to-right function composition.
 -- description:
 license:             MIT
+extra-source-files:  README.md
 license-file:        LICENSE
 author:              Milán Nagy
 maintainer:          123.wizek@gmail.com
