@@ -2,7 +2,7 @@
 with import <nixpkgs>{};
 mkDerivation {
   pname = "compose-ltr";
-  version = "0.2.3";
+  version = "0.2.4";
   src = ./.;
   libraryHaskellDepends = [ base ];
   testHaskellDepends = [ base hspec QuickCheck ];
